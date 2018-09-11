@@ -1,10 +1,4 @@
 function reset(){
-    document.getElementById('blue').disabled=false;
-    document.getElementById('green').disabled=false;
-    document.getElementById('red').disabled=false;
-    document.getElementById('creep').disabled=false;
-    document.getElementById('hero').disabled=false;
-    document.getElementById('spell').disabled=false;
     for(var i=0;i<9;i++){
         ce=document.getElementById(i+1);     
             ce.style.display='block';
@@ -12,29 +6,38 @@ function reset(){
 
 }
 function red() {
-    if(document.getElementById('red').checked) {reset(); break;}
+    document.getElementById('blue').checked=false;
+    document.getElementById('green').checked=false;
    filter();
 }
 function green() {
+    document.getElementById('blue').checked=false;
+    document.getElementById('red').checked=false;
  filter();
 }
 function blue() {
+    document.getElementById('red').checked=false;
+    document.getElementById('green').checked=false;
  filter();
 }
 function hero() {
+    document.getElementById('creep').checked=false;
+    document.getElementById('spell').checked=false;
  filter();
 }
 function creep() {
+    document.getElementById('spell').checked=false;
+    document.getElementById('hero').checked=false;
  filter();
 }
 function spell() {
+    document.getElementById('hero').checked=false;
+    document.getElementById('creep').checked=false;
  filter();
 }
 function filter(){
     reset();
     if(document.getElementById('red').checked) {
-        document.getElementById('blue').disabled=true;
-        document.getElementById('green').disabled=true;
         var ce;
     for(var i=0;i<9;i++){
         ce=document.getElementById(i+1);
@@ -43,8 +46,6 @@ function filter(){
         }
     }}
     if(document.getElementById('green').checked) {
-        document.getElementById('blue').disabled=true;
-        document.getElementById('red').disabled=true;
         var ce;
     for(var i=0;i<9;i++){
         ce=document.getElementById(i+1);
@@ -53,8 +54,6 @@ function filter(){
         }
     }}
     if(document.getElementById('blue').checked) {
-        document.getElementById('red').disabled=true;
-        document.getElementById('green').disabled=true;
         var ce;
     for(var i=0;i<9;i++){
         ce=document.getElementById(i+1);
@@ -63,8 +62,6 @@ function filter(){
         }
     }}
     if(document.getElementById('hero').checked) {
-        document.getElementById('creep').disabled=true;
-        document.getElementById('spell').disabled=true;
         var ce;
     for(var i=0;i<9;i++){
         ce=document.getElementById(i+1);
@@ -73,8 +70,6 @@ function filter(){
         }
     }}
     if(document.getElementById('creep').checked) {
-        document.getElementById('hero').disabled=true;
-        document.getElementById('spell').disabled=true;
         var ce;
     for(var i=0;i<9;i++){
         ce=document.getElementById(i+1);
@@ -83,8 +78,6 @@ function filter(){
         }
     }}
     if(document.getElementById('spell').checked) {
-        document.getElementById('hero').disabled=true;
-        document.getElementById('creep').disabled=true;
         var ce;
     for(var i=0;i<9;i++){
         ce=document.getElementById(i+1);
