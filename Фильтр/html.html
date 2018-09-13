@@ -10,33 +10,38 @@
 <body>
     <div class="container">
         <div>
-                <input id="red" onclick="red()"  type="checkbox" name="feature"
+                <input id="red" onclick="filtera('red')"  type="checkbox" name="feature"
                        value="red" />
                 <label for="red">red</label>
         </div>
         <div>
-                <input id="blue" onclick="blue()" type="checkbox" name="feature"
+                <input id="blue" onclick="filtera('blue')" type="checkbox" name="feature"
                        value="blue" />
                 <label for="blue">blue</label>
         </div>
         <div>
-                <input id="green" onclick="green()" type="checkbox" name="feature"
+                <input id="green" onclick="filtera('green')" type="checkbox" name="feature"
                        value="green" />
                 <label for="green">green</label>
-        </div ></div>
+        </div >
+        <div>
+                <input id="black" onclick="filtera('black')"  type="checkbox" name="feature"
+                       value="black" />
+                <label for="black">black</label>
+        </div></div>
         <div class="container">
             <div>
-                <input id="hero" onclick="hero()" type="checkbox" name="feature"
+                <input id="hero" onclick="filterb('hero')" type="checkbox" name="feature"
                        value="hero" />
                 <label for="hero">hero</label>
         </div>
         <div>
-                <input id="spell" onclick="spell()" type="checkbox" name="feature"
+                <input id="spell" onclick="filterb('spell')" type="checkbox" name="feature"
                        value="spell" />
                 <label for="spell">spell</label>
         </div>
         <div>
-                <input id="creep" onclick="creep()" type="checkbox" name="feature"
+                <input id="creep" onclick="filterb('creep')" type="checkbox" name="feature"
                        value="creep" />
                 <label for="creep">creep</label>
         </div></div>
@@ -50,6 +55,9 @@
     <div id="7" class="green spell"> КАРТА 1 Спелл</div>
     <div id="8" class="blue creep"> КАРТА 2 Крип</div>
     <div id="9" class="red creep"> КАРТА 3 Крип</div>
+    <div id="10" class="black spell"> КАРТА 1 Спелл</div>
+    <div id="11" class="black creep"> КАРТА 2 Крип</div>
+    <div id="12" class="black creep"> КАРТА 3 Крип</div>
     <!-- <button onclick="red()"> RED </button>
     <button onclick="blue()"> BLUE </button>
     <button onclick="green()"> GREEN </button>
